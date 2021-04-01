@@ -1,38 +1,137 @@
-.App {
-  text-align: center;
+body {
+    background: #141414;
+    color: #ffffff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.head {
+    font-size: 100px;
+    font-weight: bolder;
+    text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.movie-app>.row {
+    overflow-x: auto;
+    flex-wrap: nowrap;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.image-container {
+    position: relative;
+    transition: transform 0.2s;
 }
 
-.App-link {
-  color: #61dafb;
+.image-container:hover {
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+.overlay {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    transition: 0.5s ease;
+    opacity: 0;
+    bottom: 0;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.mail-center {
+    text-align: center;
+}
+
+.button {
+    border-radius: 15px;
+    background-color: #4CAF50;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+
+/* login */
+
+.login-btn {
+    color: var(--text-variant);
+    background-image: linear-gradient(315deg, #89d4cf, #6e45e1);
+    border-radius: 30px;
+    padding: 10px 45px;
+    margin-top: -10px;
+}
+
+.login-btn:hover {
+    color: var(--text-variant);
+    background-image: linear-gradient(315deg, #89d4cf, #6e45e1);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 30px;
+    padding: 10px 45px;
+}
+
+#login {
+    height: 100vh;
+    overflow: hidden;
+}
+
+#login-form {
+    padding-top: 5%;
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-bottom: 8%;
+}
+
+#login-form h1 {
+    font-size: 40px;
+    color: #381e56;
+}
+
+#login-form h1 a:hover {
+    text-decoration: none;
+}
+
+#login-form h3 {
+    font-weight: bold;
+    font-size: 30px;
+    padding-top: 100px;
+}
+
+#login-form p {
+    color: grey;
+}
+
+.submit-btn {
+    color: #F5F5F5;
+    padding: 10px 45px;
+    background-color: rgba(56, 30, 86, 0.7);
+    margin-top: 30px;
+}
+
+.submit-btn:hover {
+    padding: 10px 45px;
+    color: var(--text-variant);
+    background-color: rgba(56, 30, 86, 0.9);
+}
+
+#login-form .extra {
+    text-align: center;
+    padding-top: 20px;
+}
+
+#login-form a {
+    color: #381e56;
+}
+
+#login-img {
+    position: relative;
+    bottom: 0;
+    background-color: #381e56;
+    padding: 10% 8%;
 }
